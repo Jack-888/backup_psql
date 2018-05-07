@@ -1,0 +1,7 @@
+1) Run backup and write log
+./psql_dump_script.sh >> psql_dump_script_log.txt
+
+2) Run backup
+./psql_dump_script.sh
+
+Seting backup
