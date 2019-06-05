@@ -36,4 +36,6 @@ log!!!
 $ ./psql_dump_script.sh >> log/psql_dump_script_log.log
 ```
 
-
+#TODO
+1) Add size dump to log
+2) 
