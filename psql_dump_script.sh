@@ -1,18 +1,10 @@
 #!/bin/sh
-#
-# ---------------------------------------------------------------------
-# Created dump db.
-#
-# First add task cron:
-# Backup db every day
-# 0 23 * * * /bin/bash -l -c 'cd /home/backup/ && ./psql_dump_script.sh &>> psql_dump_script_log.log
-# ---------------------------------------------------------------------
 
 #seting===========================
 DATE=`date '+%Y.%m.%d %H:%M:%S'`;
 DATE_DUMP=`date '+%Y%m%d%H%M%S'`;
 
-PSQL_DB_NAME='pwrset_dev';
+PSQL_DB_NAME=$1;
 
 DUMP_NAME="$DATE_DUMP"_"$PSQL_DB_NAME"_dump.sql;
 PATH_DUMP="$PWD/dump_db/";
@@ -20,6 +12,7 @@ PATH_DUMP="$PWD/dump_db/";
 
 echo '\n';
 echo '=========';
+echo "Name DB:" $1
 echo "$DATE";
 echo 'Created dump';
 echo 'Path dump:';
