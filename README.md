@@ -1,6 +1,17 @@
 # Readme for ***Backup PostgreSQL***
 
+#  PSQL show databases 
+
+```bash
+$ sudo su - postgres
+$ psql -U postgres -W
+$ \list
+$ \q
+$ exit
+```
+
 # Run with command line
+
 ```bash
 $ ./main.sh Name_DB_for_create_dump
 ```
